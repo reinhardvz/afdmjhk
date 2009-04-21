@@ -1,0 +1,9 @@
+TARGETNAME=AFDHK
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+TARGETLIBS=$(DDK_LIB_PATH)\tdi.lib
+
+SOURCES=	afdhk.c \
+		ioctl.c 
+			

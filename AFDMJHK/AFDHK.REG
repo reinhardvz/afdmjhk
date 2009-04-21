@@ -1,0 +1,9 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\AFDHK]
+"Start"=dword:2
+"Type"=dword:1
+"ErrorControl"=dword:1
+"DisplayName"="AFD Hook"
+"Group" = "Extended base"
+

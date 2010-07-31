@@ -1,0 +1,13 @@
+TARGETNAME=npisubvert
+TARGETTYPE=DRIVER
+
+TARGETLIBS=$(DDK_LIB_PATH)\netio.lib
+
+SOURCES=npisubvert.c \
+        tools.c \
+        pe.c \
+        gettl.c \
+        unhooktl.c
+
+
+

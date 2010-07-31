@@ -1,0 +1,10 @@
+TARGETNAME=echoserv
+TARGETTYPE=DRIVER
+
+TARGETLIBS=$(DDK_LIB_PATH)\netio.lib
+
+SOURCES=echoserv.c \
+        simplewsk.c
+
+
+

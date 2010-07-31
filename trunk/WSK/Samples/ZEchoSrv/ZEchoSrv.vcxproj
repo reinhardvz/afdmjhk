@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A00C0484-4380-4750-B370-95E6B15390F6}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>C:\WinDDK\7600.16385.0\ddkbuild.cmd -W7 checked . -cZ</NMakeBuildCommandLine>
+    <NMakeOutput>ZEchoSrv.sys</NMakeOutput>
+    <NMakeReBuildCommandLine>C:\WinDDK\7600.16385.0\ddkbuild.cmd -W7 checked . -cZ</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>C:\WinDDK\7600.16385.0\inc;C:\WinDDK\7600.16385.0\inc\ddk;C:\WinDDK\7600.16385.0\inc\wdf\kmdf\1.9;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>C:\WinDDK\7600.16385.0\inc;C:\WinDDK\7600.16385.0\inc\ddk;C:\WinDDK\7600.16385.0\inc\wdf\kmdf\1.9;$(NMakeIncludeSearchPath)</NMakeForcedIncludes>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>C:\WinDDK\7600.16385.0\ddkbuild.cmd -W7 .free -cZ</NMakeBuildCommandLine>
+    <NMakeOutput>ZEchoSrv.sys</NMakeOutput>
+    <NMakeReBuildCommandLine>C:\WinDDK\7600.16385.0\ddkbuild.cmd -W7 .free -cZ</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>C:\WinDDK\7600.16385.0\inc;C:\WinDDK\7600.16385.0\inc\ddk;C:\WinDDK\7600.16385.0\inc\wdf\kmdf\1.9;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>C:\WinDDK\7600.16385.0\inc;C:\WinDDK\7600.16385.0\inc\ddk;C:\WinDDK\7600.16385.0\inc\wdf\kmdf\1.9;$(NMakeIncludeSearchPath)</NMakeForcedIncludes>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="readme.txt" />
+    <None Include="sources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ZEchoSrv.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ZEchoSrv.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

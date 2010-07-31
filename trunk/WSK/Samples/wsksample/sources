@@ -1,0 +1,9 @@
+TARGETNAME=wsksample
+TARGETTYPE=DRIVER
+
+TARGETLIBS=$(DDK_LIB_PATH)\netio.lib
+
+SOURCES=wsksample.c
+
+
+
